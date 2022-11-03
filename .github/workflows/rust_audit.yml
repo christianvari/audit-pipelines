@@ -32,7 +32,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo test --no-fail-fast
+      - run: cargo test --no-fail-fast >> $GITHUB_STEP_SUMMARY
       
   clippy:
     runs-on: ubuntu-latest
